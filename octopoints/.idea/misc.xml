@@ -3,7 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/tpava/AndroidStudioProjects/octopoints-kotlin/octopoints/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.403125" />
+        <entry key="..\:/Users/tpava/AndroidStudioProjects/octopoints-kotlin/octopoints/app/src/main/res/drawable/ic_baseline_library_books_24.xml" value="0.403125" />
+        <entry key="..\:/Users/tpava/AndroidStudioProjects/octopoints-kotlin/octopoints/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.403125" />
+        <entry key="..\:/Users/tpava/AndroidStudioProjects/octopoints-kotlin/octopoints/app/src/main/res/drawable/ic_baseline_person_add_24.xml" value="0.403125" />
+        <entry key="..\:/Users/tpava/AndroidStudioProjects/octopoints-kotlin/octopoints/app/src/main/res/drawable/rounded_bottom_modal_sheet.xml" value="0.39692307692307693" />
         <entry key="..\:/Users/tpava/AndroidStudioProjects/octopoints-kotlin/octopoints/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/tpava/AndroidStudioProjects/octopoints-kotlin/octopoints/app/src/main/res/layout/bottom_sheet_create.xml" value="0.36096014492753625" />
+        <entry key="..\:/Users/tpava/AndroidStudioProjects/octopoints-kotlin/octopoints/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/tpava/AndroidStudioProjects/octopoints-kotlin/octopoints/app/src/main/res/layout/fragment_matches.xml" value="0.25" />
+        <entry key="..\:/Users/tpava/AndroidStudioProjects/octopoints-kotlin/octopoints/app/src/main/res/layout/fragment_player.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/tpava/AndroidStudioProjects/octopoints-kotlin/octopoints/app/src/main/res/layout/fragment_players.xml" value="0.25" />
+        <entry key="..\:/Users/tpava/AndroidStudioProjects/octopoints-kotlin/octopoints/app/src/main/res/layout/match_item.xml" value="0.21557971014492755" />
+        <entry key="..\:/Users/tpava/AndroidStudioProjects/octopoints-kotlin/octopoints/app/src/main/res/layout/team_item.xml" value="0.2421875" />
+        <entry key="..\:/Users/tpava/AndroidStudioProjects/octopoints-kotlin/octopoints/app/src/main/res/layout/user_item.xml" value="0.33" />
+        <entry key="..\:/Users/tpava/AndroidStudioProjects/octopoints-kotlin/octopoints/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />
       </map>
     </option>
   </component>

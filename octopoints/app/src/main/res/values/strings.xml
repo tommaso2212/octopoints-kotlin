@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Octopoints</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_matches">Partite</string>
+    <string name="title_players">Giocatori</string>
+    <string name="new_match">Nuova partita</string>
+    <string name="new_user">Nuovo giocatore</string>
+    <string name="confirm_button">Crea</string>
+    <string name="delete_button">Elimina</string>
+    <string name="total">Tot.</string>
 </resources>
