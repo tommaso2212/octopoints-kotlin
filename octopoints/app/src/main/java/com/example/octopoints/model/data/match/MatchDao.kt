@@ -14,6 +14,7 @@ interface MatchDao {
     suspend fun getAll(): List<Match>
 
     @Transaction
-    @Query("SELECT * FROM matches M, users U, joiningteam J, teams T WHERE M.match_id=:match_id AND T.match_id=:match_id AND T.team_id=J.team_id AND J.user_id=U.user_id")
+    //@Query("SELECT * FROM matches M, users U, joiningteam J, teams T WHERE :match_id=M.match_id AND T.match_id=M.match_id AND T.team_id=J.team_id AND J.user_id=U.user_id")
+    @Query("SELECT * FROM matches LEFT JOIN teams ON matches.match_id=teams.match_id WHERE :match_id=matches.match_id")
     suspend fun getMatchById(match_id: Long): MatchWithTeams
 }

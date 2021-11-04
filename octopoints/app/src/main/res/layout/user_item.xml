@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_gravity="center"
-    app:cardCornerRadius="7dp"
-    app:contentPadding="20dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,33 +14,38 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:id="@+id/userStats">
 
             <TextView
                 android:id="@+id/win"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_baseline_keyboard_arrow_up_24"/>
+                app:drawableStartCompat="@drawable/ic_baseline_keyboard_arrow_up_24"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/draw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_baseline_horizontal_rule_24"
-                android:layout_marginHorizontal="40dp"/>
+                android:layout_marginHorizontal="40dp"
+                app:drawableStartCompat="@drawable/ic_baseline_horizontal_rule_24"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/lose"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_baseline_keyboard_arrow_down_24" />
+                app:drawableStartCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:textColor="@color/black"/>
 
         </LinearLayout>
     </LinearLayout>
@@ -57,4 +59,4 @@
         android:contentDescription="@string/delete_button"
         android:src="@drawable/ic_baseline_delete_24" />
 
-</com.google.android.material.card.MaterialCardView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

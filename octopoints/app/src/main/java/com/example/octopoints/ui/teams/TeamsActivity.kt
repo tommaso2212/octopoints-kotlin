@@ -5,26 +5,36 @@ import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.octopoints.databinding.ActivityTeamsBinding
+import com.example.octopoints.model.data.match.MatchWithTeams
+import com.example.octopoints.ui.common.CommonViewModelFactory
 
 class TeamsActivity : AppCompatActivity() {
-
-    private var _binding: ActivityTeamsBinding? = null
-    private val binding get() = _binding!!
-    private lateinit var teamsViewModel: TeamsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        teamsViewModel = ViewModelProvider(this).get(TeamsViewModel::class.java)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        teamsViewModel.initDataAccess(this, intent.getStringExtra("match_id").toString())
+        val binding = ActivityTeamsBinding.inflate(layoutInflater)
 
-        _binding = ActivityTeamsBinding.inflate(layoutInflater)
+        val teamViewModel = ViewModelProvider(this, CommonViewModelFactory<MatchWithTeams>(this, intent.getStringExtra("match_id").toString().toLong())).get(TeamViewModel::class.java)
 
-        teamsViewModel.matchWithTeams.observe(this, Observer {
-            setTitle(it.match.description)
+        teamViewModel.data.observe(this, Observer {
+            title = it.match.description
+            binding.teamList.adapter = TeamAdapter(this, it.teams) { team ->
+                teamViewModel.deleteTeam(team)
+            }
         })
 
+        binding.createTeam.setOnClickListener{
+            teamViewModel.createTeam()
+        }
+
         setContentView(binding.root)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 }

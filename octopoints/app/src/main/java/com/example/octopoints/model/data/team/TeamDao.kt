@@ -19,9 +19,10 @@ interface TeamDao {
     @Update
     suspend fun updateTeam(team: Team)
 
-    //TODO: se funziona MatchWithTeams non serve
     @Transaction
-    @Query("SELECT * FROM teams, joiningteam, users WHERE :match_id=teams.match_id AND teams.team_id = joiningteam.team_id AND joiningteam.user_id = users.user_id")
+    //@Query("SELECT * FROM teams, joiningteam, users WHERE :match_id=teams.match_id AND teams.team_id = joiningteam.team_id AND joiningteam.user_id = users.user_id")
+    //@Query("SELECT * FROM teams LEFT JOIN joiningteam, users ON teams.team_id=joiningteam.team_id AND joiningteam.user_id=users.user_id WHERE :match_id=teams.match_id")
+    @Query("SELECT * FROM teams WHERE match_id=:match_id")
     suspend fun getTeamsByMatchId(match_id: Long): List<TeamWithUsers>
 
     @Transaction
